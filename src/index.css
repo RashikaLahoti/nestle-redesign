@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@keyframes moveToLeft {
+  from {
+    transform: translateX(232px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveToRight {
+  from {
+    transform: translateX(-235px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.move-to-left {
+  animation: moveToLeft 1s ease-in-out forwards;
+}
+
+.move-to-right {
+  animation: moveToRight 1s ease-in-out forwards;
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+.animate-scroll {
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+
+.animate-scroll:hover{
+  animation-play-state:paused;
+}
+
+.scrollbar-hide::-webkit-scrollbar{
+  display:none;
+}
+
+.thin-scrollbar {
+    scrollbar-width: thin; 
+    scrollbar-color: transparent transparent;
+}
+
+.thin-scrollbar::-webkit-scrollbar {
+    height: 3px;
+    background-color: transparent;
+}
+
+.thin-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #a0a0a0; 
+    border-radius: 10px;
+}
+
+.thin-scrollbar::-webkit-scrollbar-track {
+    background-color: transparent; 
+}
+
+.small-scrollbar {
+  scrollbar-width: thin; 
+  scrollbar-color: #dab709af #fff9c4;
+}
+
+.small-scrollbar::-webkit-scrollbar {
+  width: 1px;
+  height: 1px; 
+}
+
+.small-scrollbar::-webkit-scrollbar-track {
+  background-color: #fff9c4;
+  border-radius: 1px;
+}
+
+.small-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #deba07a9;
+  border-radius: 1px;
+}
+
+.small-scrollbar::-webkit-scrollbar-button {
+  display: none;
+}
